@@ -1,2 +1,7 @@
 ---
-# tasks file for apt
+- name: write apt config
+  template:
+    src: 80-vagrant.txt
+    dest: /etc/apt/apt.conf.d/80-vagrant
+    owner: root
+    group: root
