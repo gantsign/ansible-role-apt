@@ -1,6 +1,8 @@
 Ansible Role: APT
 =================
 
+[![Build Status](https://travis-ci.org/gantsign/ansible-role-apt.svg?branch=master)](https://travis-ci.org/gantsign/ansible-role-apt)
+
 Role to configure the APT package manager. Currently limited to controlling the
 properties that affect the cleaning of the DEB files (typically by the APT cron
 job). The DEB files are removed to save on disk space but if you're using
