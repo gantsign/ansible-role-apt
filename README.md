@@ -1,38 +1,55 @@
-Role Name
-=========
+Ansible Role: APT
+=================
 
-A brief description of the role goes here.
+Role to configure the APT package manager. Currently limited to controlling the
+properties that affect the cleaning of the DEB files (typically by the APT cron
+job). The DEB files are removed to save on disk space but if you're using
+Vagrant (with the vagrant-cachier plugin) you may want to keep the DEB files to
+speed up VM rebuilds.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+* Ubuntu
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+The following variables will change the behavior of this role (default values
+are shown below):
 
-Dependencies
-------------
+```yaml
+# Whether the cache of DEB files should be preserved or cleaned
+apt_preserve_cache: false
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+# Max age (in days) of DEB files to keep when cleaning cache
+apt_archives_maxage: null
+
+# Min age (in days) of DEB files to keep when cleaning cache
+apt_archives_minage: null
+
+# Max size (in MB) of DEB files to keep when cleaning cache
+apt_archives_maxsize: null
+```
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```yaml
+- hosts: servers
+  roles:
+     - { role: gantsign.apt, apt_preserve_cache: true }
+```
 
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+John Freeman
+
+GantSign Ltd.
+Company No. 06109112 (registered in England)
