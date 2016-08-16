@@ -29,7 +29,7 @@ script:
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
 
   # Run the playbook with ansible-playbook
-  - sudo ansible-playbook tests/test.yml -i tests/inventory
+  - ansible-playbook tests/test.yml -i tests/inventory
 
   # Check apt configuration
   - grep 'APT::Archives::MaxAge "81";' /etc/apt/apt.conf.d/80-test
