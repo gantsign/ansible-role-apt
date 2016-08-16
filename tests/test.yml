@@ -3,6 +3,7 @@
   remote_user: root
   roles:
     - role: ansible-role-apt
+      apt_config_filename: '80-test'
       apt_archives_maxage: 81
       apt_archives_minage: 82
       apt_archives_maxsize: 83

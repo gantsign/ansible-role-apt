@@ -21,6 +21,9 @@ The following variables will change the behavior of this role (default values
 are shown below):
 
 ```yaml
+# The filename for the apt config
+apt_config_filename: '80-vagrant'
+
 # Whether the cache of DEB files should be preserved or cleaned
 apt_preserve_cache: false
 
