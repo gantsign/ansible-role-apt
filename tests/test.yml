@@ -2,4 +2,7 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - ansible-role-apt
+    - role: ansible-role-apt
+      apt_archives_maxage: 81
+      apt_archives_minage: 82
+      apt_archives_maxsize: 83
