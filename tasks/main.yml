@@ -1,7 +1,7 @@
 ---
 - name: write apt config
   template:
-    src: 80-vagrant.txt
+    src: 80-vagrant.j2
     dest: /etc/apt/apt.conf.d/80-vagrant
     owner: root
     group: root
