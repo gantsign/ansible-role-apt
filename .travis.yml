@@ -32,9 +32,9 @@ script:
   - sudo ansible-playbook tests/test.yml -i tests/inventory
 
   # Check apt configuration
-  - grep 'APT::Archives::MaxAge "81";' /etc/apt/apt.conf.d/80-vagrant
-  - grep 'APT::Archives::MinAge "82";' /etc/apt/apt.conf.d/80-vagrant
-  - grep 'APT::Archives::MaxSize "83";' /etc/apt/apt.conf.d/80-vagrant
+  - grep 'APT::Archives::MaxAge "81";' /etc/apt/apt.conf.d/80-test
+  - grep 'APT::Archives::MinAge "82";' /etc/apt/apt.conf.d/80-test
+  - grep 'APT::Archives::MaxSize "83";' /etc/apt/apt.conf.d/80-test
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
