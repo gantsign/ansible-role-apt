@@ -5,3 +5,4 @@
     dest: /etc/apt/apt.conf.d/80-vagrant
     owner: root
     group: root
+    mode: 'u=rw,go=r'
