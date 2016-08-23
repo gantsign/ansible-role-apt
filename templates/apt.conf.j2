@@ -1,6 +1,6 @@
 // {{ ansible_managed }}
 
-{% if apt_preserve_cache %}
+{% if apt_preserve_cache | bool %}
 APT::Archives::MaxAge "0";
 APT::Archives::MinAge "0";
 APT::Archives::MaxSize "0";
