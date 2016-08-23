@@ -25,7 +25,7 @@ are shown below):
 apt_config_filename: '80-vagrant'
 
 # Whether the cache of DEB files should be preserved or cleaned
-apt_preserve_cache: false
+apt_preserve_cache: no
 
 # Max age (in days) of DEB files to keep when cleaning cache
 apt_archives_maxage: null
@@ -43,7 +43,7 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-     - { role: gantsign.apt, apt_preserve_cache: true }
+     - { role: gantsign.apt, apt_preserve_cache: yes }
 ```
 
 Development & Testing
