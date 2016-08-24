@@ -7,3 +7,6 @@ docker:
   - name: ansible-role-apt-01
     image: ubuntu
     image_version: '16.04'
+
+testinfra:
+  hosts: 'ansible-role-apt-01'
