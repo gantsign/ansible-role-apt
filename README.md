@@ -47,6 +47,11 @@ Example Playbook
      - { role: gantsign.apt, apt_preserve_cache: yes }
 ```
 
+More roles from GantSign
+------------------------
+
+You can find more roles from GantSign on [Ansible Galaxy](https://galaxy.ansible.com/gantsign).
+
 Development & Testing
 ---------------------
 
