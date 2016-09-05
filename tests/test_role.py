@@ -14,6 +14,7 @@ def test_apt_config_file_permissions(File):
     assert conf.group == 'root'
     assert oct(conf.mode) == '0644'
 
+
 @pytest.mark.parametrize('param', [
     ('APT::Archives::MaxAge "81";'),
     ('APT::Archives::MinAge "82";'),
