@@ -16,9 +16,9 @@ def test_apt_config_file_permissions(File):
 
 
 @pytest.mark.parametrize('param', [
-    ('APT::Archives::MaxAge "81";'),
-    ('APT::Archives::MinAge "82";'),
-    ('APT::Archives::MaxSize "83";')
+    'APT::Archives::MaxAge "81";',
+    'APT::Archives::MinAge "82";',
+    'APT::Archives::MaxSize "83";'
 ])
 def test_apt_config_file(File, param):
     conf = File('/etc/apt/apt.conf.d/80-test')
