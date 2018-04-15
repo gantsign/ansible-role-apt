@@ -1,4 +1,4 @@
-// {{ ansible_managed }}
+{{ ansible_managed | comment('c') }}
 
 {% if apt_preserve_cache | bool %}
 APT::Archives::MaxAge "0";
