@@ -45,7 +45,8 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-     - { role: gantsign.apt, apt_preserve_cache: yes }
+    - role: gantsign.apt
+      apt_preserve_cache: yes
 ```
 
 More Roles From GantSign
