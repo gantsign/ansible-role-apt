@@ -14,7 +14,18 @@ speed up VM rebuilds.
 Requirements
 ------------
 
-* Ubuntu
+* Ansible >= 2.3
+
+* Linux Distribution
+
+    * Debian Family
+
+        * Ubuntu
+
+            * Trusty (14.04)
+            * Xenial (16.04)
+
+        * Note: other versions are likely to work but have not been tested.
 
 Role Variables
 --------------
