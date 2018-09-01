@@ -13,4 +13,5 @@ galaxy_info:
         - bionic
   galaxy_tags:
     - apt
+    - system
 dependencies: []
