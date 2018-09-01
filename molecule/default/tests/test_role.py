@@ -7,8 +7,8 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-def test_apt_config_file_permissions(File):
-    conf = File('/etc/apt/apt.conf.d/80-test')
+def test_apt_config_file_permissions(host):
+    conf = host.file('/etc/apt/apt.conf.d/80-test')
 
     assert conf.exists
     assert conf.is_file
@@ -22,8 +22,8 @@ def test_apt_config_file_permissions(File):
     'APT::Archives::MinAge "82";',
     'APT::Archives::MaxSize "83";'
 ])
-def test_apt_config_file(File, param):
-    conf = File('/etc/apt/apt.conf.d/80-test')
+def test_apt_config_file(host, param):
+    conf = host.file('/etc/apt/apt.conf.d/80-test')
 
     assert conf.exists
     assert conf.is_file
