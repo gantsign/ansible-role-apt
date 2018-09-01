@@ -9,8 +9,8 @@ lint:
   name: yamllint
 
 platforms:
-  - name: ansible-role-apt-01
-    image: ubuntu:16.04
+  - name: ansible-role-apt-default
+    image: ubuntu:18.04
 
 provisioner:
   name: ansible
