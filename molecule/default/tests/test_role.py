@@ -1,10 +1,4 @@
 import pytest
-import os
-
-import testinfra.utils.ansible_runner
-
-testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
-    os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
 def test_apt_config_file_permissions(host):
@@ -14,7 +8,7 @@ def test_apt_config_file_permissions(host):
     assert conf.is_file
     assert conf.user == 'root'
     assert conf.group == 'root'
-    assert oct(conf.mode) == '0644'
+    assert oct(conf.mode) == '0o644'
 
 
 @pytest.mark.parametrize('param', [
