@@ -1,7 +1,7 @@
 Ansible Role: APT
 =================
 
-[![Build Status](https://travis-ci.com/gantsign/ansible-role-apt.svg?branch=master)](https://travis-ci.com/gantsign/ansible-role-apt)
+[![Tests](https://github.com/gantsign/ansible-role-apt/workflows/Tests/badge.svg)](https://github.com/gantsign/ansible-role-apt/actions?query=workflow%3ATests)
 [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-gantsign.apt-blue.svg)](https://galaxy.ansible.com/gantsign/apt)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/gantsign/ansible-role-apt/master/LICENSE)
 
