@@ -32,14 +32,14 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.6'
+          python-version: '3.8'
 
       - name: Cache Molecule
         id: molecule-cache
         uses: actions/cache@v2
         with:
           path: ~/.moleculew
-          key: Ansible-${{ matrix.ansible-version }}-${{ hashFiles('.moleculew/**') }}
+          key: Ansible-${{ matrix.ansible-version }}-${{ hashFiles('.moleculew/**') }}-v2
 
       - name: Install dependencies
         if: steps.molecule-cache.outputs.cache-hit != 'true'
